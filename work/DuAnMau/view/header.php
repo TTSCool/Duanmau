@@ -9,10 +9,10 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="view/home.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Shop</a>
+          <a class="nav-link" href="view/product/product.php">Shop</a>
         </li>
       </ul>
     </nav>

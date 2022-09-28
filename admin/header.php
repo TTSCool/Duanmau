@@ -10,6 +10,9 @@
 </head>
 <body>
     <div class="container">
+        <div class="name">
+            Cửa hàng trực tuyến Xshop
+        </div>
         <header>
         <nav>
                 <a href="#">Trang chủ</a>

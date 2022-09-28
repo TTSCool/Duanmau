@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: tahoma;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: gray;
+}
+.container{
+    width: 1024px;
+    margin: 0 auto;
+}
+header{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    background-color: #FDB515;
+}
+header a{
+    text-align: center;
+}   
+header img{
+    width: 80px;
+}
+.search{
+    margin: auto;
+}
+.search input{
+    border: white 2px solid;
+}
+.search button{
+    background-color: #FDB515;
+    margin-left: -4px;
+    padding: 0 2px;
+    border: white 2px solid;
+    color: white;
+}
+
+.search button:hover{
+    background-color: rgb(255, 106, 0);
+    cursor: pointer;
+    color: pink;
+    border: pink 2px solid;
+}
+
+nav{
+    padding-top: 2px;
+    width: 100%;
+    line-height: 80px;
+    background-color: #FDB515;
+    display: grid;
+    grid-template-columns: 120px 120px 120px 120px 120px 120px;
+    grid-gap: 0 5px;
+    grid-template-rows: 80px;
+}
+nav a{
+    line-height: 80px;
+    text-decoration: none;
+    color: white;
+    background-color: #FDB515;
+    box-shadow: 2px 1px 6px 1px white;
+    border-bottom: 4px white solid;
+}
+nav a:hover{
+    font-size: 1.5em;
+    box-shadow: 2px 1px 6px 1px rgb(255, 106, 0);
+    color: rgb(255, 106, 0);
+    border-bottom: 6px rgb(255, 106, 0) solid;
+}
+.banner img{
+    width: 100%;
+}
+.sting{
+    margin-top: -3px;
+}
+.sting img{
+    width: 45%;
+}
+.content{
+    display: flex;
+}
+.word{
+    text-align: center;
+    padding: 26px 25px;
+    background-color: #D9D9D9;
+}
+.word h1{
+    font-size: 3em;
+    color: #BB312C;
+    padding-bottom: 10px;
+}
+.word p{
+    font-size: 1.6em;
+}
+.word button{
+    background-color: #FDB515;
+    border: 5px white solid;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 2em;
+    border-radius: 10px;
+}
+.word button:hover{
+    background-color: #FF5505;
+    cursor: pointer;
+}
+
+footer{
+    margin-top: -12px;
+    padding: 20px;
+    display: flex;
+    background-color: #FDB515;
+    justify-content: space-evenly;
+}
+footer p{
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+footer a img{
+    height: 30px;
+}

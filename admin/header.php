@@ -13,6 +13,7 @@
         <div class="name">
             Cửa hàng trực tuyến Xshop
         </div>
+        <br>
         <header>
         <nav>
                 <a href="#">Trang chủ</a>
@@ -22,5 +23,5 @@
                 <a href="binhluan/index.php">Bình luận</a>
                 <a href="#">Thống kê</a>
         </nav>
-            <div class="search"><input type="text"><button><i class="fa-solid fa-magnifying-glass"></i></button> </div>           
+        <div class="search"><input type="text"><button><i class="fa-solid fa-magnifying-glass"></i></button> </div>           
         </header>

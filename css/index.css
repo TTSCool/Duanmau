@@ -11,7 +11,6 @@ body{
     background-color: lightgrey;
 }
 .container{
-    width: 1024px;
     margin: 0 auto;
 }
 .name{
@@ -22,6 +21,7 @@ body{
     padding-top: 5px;
     color: #70ADF5;
     font-size: 40px;
+    border-radius: 20px;
 }
 header{
     display: grid;
@@ -104,15 +104,16 @@ nav a:hover{
     font-size: 1.6em;
 }
 .word button{
-    background-color: white;
-    border: 5px white solid;
-    color: white;
+    background-color: #70ADF5;
+    border: 5px #E3F57A solid;
+    color: #E3F57A;
     padding: 10px;
     margin: 10px;
     font-size: 2em;
     border-radius: 10px;
 }
 .word button:hover{
+    color: #70ADF5;
     background-color: #E3F57A;
     cursor: pointer;
 }

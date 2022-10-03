@@ -1,13 +1,26 @@
 <?php
-    include "../../model/connection.php";
+    require_once "../../model/global.php";
     include "header.php";
     if(isset($_GET['act'])){
         $act=$_GET['act'];
         switch ($act) {
             case 'adddm':
+                if(isset($_POST['btn_tdm'])){
+                $tendm=$_POST['tendm'];
+                $sql="INSERT INTO danhmuc(tendanhmuc) VALUES('$tendm')";
+                pdo_execute($sql);
+                $thongbao="Thêm thành công"; 
+            }   
                 include "../danhmuc/add.php";
                 break;
             case 'addsp':
+                case 'addsp':
+                    if(isset($_POST['btn_tsp'])){
+                    $tendm=$_POST['tensp'];
+                    $sql="INSERT INTO danhmuc(tensp) VALUES('$tensp')";
+                    pdo_execute($sql);
+                    $thongbao="Thêm thành công"; 
+                } 
                 include "../sanpham/add.php";
                 break;
             case 'addnd':

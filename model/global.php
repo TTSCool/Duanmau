@@ -1,6 +1,5 @@
 <?php
-$CONNECTION_MODEL="../model/connection.php";
-$SESSON_MODEL="../model/connection.php";
+$SESSON_MODEL="../model/sesson.php";
 //-------
 function pdo_get_connection(){
 $servername = "localhost";
@@ -14,16 +13,17 @@ return $conn;
 
 function pdo_execute($sql){
     $sql_args = array_slice(func_get_args(), 1);
-    try {
+    try{
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
-        $stmt->execute($sql_args); 
-      } catch(PDOException $e) {
+        $stmt->execute($sql_args);
+    }
+    catch(PDOException $e){
         throw $e;
-      }
-      finally{
+    }
+    finally{
         unset($conn);
-      }
+    }
 }
 //-------
 function pdo_query($sql){

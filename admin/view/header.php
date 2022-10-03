@@ -15,12 +15,12 @@
                 <div class="logo">
                     <a href="3"><img src="../../img/Logo.png" alt=""></a>
                 </div>
-                <a href="../view/index.php">Trang chủ</a>
-                <a href="../danhmuc/index.php" >Danh mục</a>
-                <a href="../sanpham/index.php">Sản phẩm</a>
-                <a href="../nguoidung/index.php">Người dùng</a>
-                <a href="../binhluan/index.php">Bình luận</a>
-                <a href="#">Thống kê</a>
+                <a href="index.php">Trang chủ</a>
+                <a href="index.php?act=adddm">Danh mục</a>
+                <a href="index.php?act=addsp">Sản phẩm</a>
+                <a href="index.php?act=addnd">Người dùng</a>
+                <a href="index.php?act=listbl">Bình luận</a>
+                <a href="index.php?act=looktk">Thống kê</a>
         </nav>
         <div class="search"><input type="text"><button><i class="fa-solid fa-magnifying-glass"></i></button> </div>           
         </header>

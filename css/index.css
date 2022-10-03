@@ -11,6 +11,7 @@ body{
 }
 .container{
     margin: 0 auto;
+    margin-top: 85px;
 }
 header{
     display: grid;
@@ -82,49 +83,11 @@ nav a:hover{
     padding-top: 20px;
 }
 .banner img{
-    margin-top: 85px;
     width: 100%;
     height: 600px;
 }
-.sting{
-    margin-top: -3px;
-}
-.sting img{
-    width: 45%;
-}
-.content{
-    display: flex;
-}
-.word{
-    text-align: center;
-    padding: 26px 25px;
-    background-color: lightblue;
-}
-.word h1{
-    font-size: 3em;
-    color: #F56E62;
-    padding-bottom: 10px;
-}
-.word p{
-    font-size: 1.6em;
-}
-.word button{
-    background-color: #70ADF5;
-    border: 5px #E3F57A solid;
-    color: #E3F57A;
-    padding: 10px;
-    margin: 10px;
-    font-size: 2em;
-    border-radius: 10px;
-}
-.word button:hover{
-    color: #70ADF5;
-    background-color: #E3F57A;
-    cursor: pointer;
-}
 
 footer{
-    margin-top: -12px;
     padding: 20px;
     display: flex;
     background-color: #70ADF5;

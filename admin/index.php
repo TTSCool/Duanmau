@@ -1,6 +1,6 @@
 <?php
-    require_once "../../model/global.php";
-    include "header.php";
+    require_once "../model/global.php";
+    include "view/header.php";
     if(isset($_GET['act'])){
         $act=$_GET['act'];
         switch ($act) {
@@ -11,12 +11,12 @@
                 pdo_execute($sql);
                 $thongbao="Thêm thành công"; 
             }   
-                include "../danhmuc/add.php";
+                include "danhmuc/add.php";
                 break;
             case 'listdm':
                 $sql="SELECT * FROM danhmuc";
                 $listdm=pdo_query($sql);
-                include "../danhmuc/list.php";
+                include "danhmuc/list.php";
                 break;
             case 'deletedm':
                 if(isset($_GET['id'])&&($_GET['id']>0)){
@@ -25,7 +25,7 @@
                 }
                 $sql="SELECT * FROM danhmuc";
                 $listdm=pdo_query($sql);
-                include "../danhmuc/list.php";
+                include "danhmuc/list.php";
                 break;
             case 'addsp':
                 case 'addsp':
@@ -35,23 +35,23 @@
                     pdo_execute($sql);
                     $thongbao="Thêm thành công"; 
                 } 
-                include "../sanpham/add.php";
+                include "sanpham/add.php";
                 break;
             case 'addnd':
-                include "../nguoidung/add.php";
+                include "nguoidung/add.php";
                 break;
             case 'listbl':
-                include "../binhluan/list.php";
+                include "binhluan/list.php";
                 break;
             case 'looktk':
-                include "../thongke/thongke.php";
+                include "thongke/thongke.php";
                 break;
             default:
-                include "home.php";
+                include "view/home.php";
                 break;
         }
-    }else{include "home.php";}
+    }else{include "view/home.php";}
     
     
-    include "footer.php";
+    include "view/footer.php";
 ?>

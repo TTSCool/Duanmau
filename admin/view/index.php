@@ -13,6 +13,20 @@
             }   
                 include "../danhmuc/add.php";
                 break;
+            case 'listdm':
+                $sql="SELECT * FROM danhmuc";
+                $listdm=pdo_query($sql);
+                include "../danhmuc/list.php";
+                break;
+            case 'deletedm':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                    $sql="DELETE FROM danhmuc WHERE id =".$_GET['id'];
+                    pdo_execute($sql);
+                }
+                $sql="SELECT * FROM danhmuc";
+                $listdm=pdo_query($sql);
+                include "../danhmuc/list.php";
+                break;
             case 'addsp':
                 case 'addsp':
                     if(isset($_POST['btn_tsp'])){

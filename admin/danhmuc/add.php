@@ -7,7 +7,7 @@
         Tên danh mục: <br>
         <input type="text" name="tendm">
     </label> <br>
-    <button type="submit" name="btn_tdm">Thêm danh mục</button>
+    <button type="submit" name="btn_tdm">Thêm danh mục</button> <a href="index.php?act=listdm">Danh mục</a>
     <br>
     <?php
     if(isset($thongbao)&&($thongbao!="")) echo $thongbao;

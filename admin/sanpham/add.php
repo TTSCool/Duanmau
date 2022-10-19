@@ -1,1 +1,30 @@
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus corporis similique cupiditate veritatis itaque sapiente ducimus totam, aspernatur voluptatum dolore iure ad eligendi deserunt, dolor vero magnam ipsum nulla recusandae nam hic repudiandae asperiores, voluptates quam. Soluta aliquam aspernatur officiis, numquam laborum nisi. Quisquam incidunt error laboriosam aspernatur. Unde ipsum, quas fugit repudiandae praesentium cupiditate adipisci maiores accusantium. Explicabo deleniti suscipit cupiditate nam ipsam reprehenderit ipsum aperiam quidem, assumenda, consequuntur nulla expedita neque? Velit iure odit harum. Ullam alias dolor id sunt pariatur soluta totam, necessitatibus veritatis animi quam maxime maiores fugit quia cumque reiciendis voluptatem tempora velit dicta voluptate ipsa nesciunt ad iure! Suscipit iure architecto accusamus provident illum obcaecati eius quisquam. Praesentium quidem maxime, aut animi quas earum deleniti voluptatibus itaque unde eius recusandae quaerat consectetur expedita, veniam minus. Ipsum et voluptatum inventore facere dolor voluptas ratione nulla, laboriosam, delectus modi quo cumque fugit minima perspiciatis quidem eveniet odit. Molestias blanditiis id odit eos dignissimos nobis sunt adipisci laborum tempore, expedita non nihil distinctio culpa maxime aliquid esse eius aliquam sequi mollitia soluta suscipit in saepe vero. Nam molestiae illo cum qui tempore! Hic quo iure, temporibus quisquam neque magni tenetur ipsam libero ex, quas, delectus velit pariatur.
+<form action="index.php?act=addsp" method="POST" enctype="multipart/form-data">
+    <label for="">
+        Tên sản phẩm: <br>
+        <input type="text" name="tensp">
+    </label> <br>
+    <label for="">
+        Giá: <br>
+        <input type="text" name="gia">
+    </label> <br>
+    <label for="">
+        Hình ảnh: <br>
+        <input type="file" name="hinhanh">
+    </label> <br>
+    <label for="">
+        Mô tả: <br>
+        <textarea name="mota" id="" cols="30" rows="10" ></textarea>
+    </label> <br>
+    <select name="maloaisp" id="">
+            <option value="">Chọn loại sản phẩm</option>
+            <?php foreach ($listdm as $dm) : ?>
+                <option value="<?=$dm['iddm']?>"><?=$dm['tendanhmuc']?></option>
+            <?php endforeach ?>
+    </select> <br>
+    <button type="submit" name="btn_tsp">Thêm sản phẩm</button>
+    <button type="button"><a href="index.php?act=listsp" style="text-decoration:none; color:black">Danh sách sản phẩm</a></button>
+    <br>
+    <?php
+    if(isset($thongbao)&&($thongbao!="")) echo $thongbao;
+    ?>
+</form>

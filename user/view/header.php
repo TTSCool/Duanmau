@@ -10,17 +10,17 @@
 </head>
 <body>
     <div class="container">
-    <div class="name">
-            Cửa hàng trực tuyến Xshop
-        </div>
         <header>
         <nav>
-                <a href="#">Trang chủ</a>
-                <a href="#">Giới thiệu</a>
-                <a href="#">Giỏ hàng</a>
-                <a href="#">Tài khoản</a>
-                <a href="#">Liên hệ</a>
-                <a href="#">Góp ý</a>
+        <div class="logo">
+                    <a href="index.php"><img src="../img/Logo.png" alt=""></a>
+                </div>
+                <a href="index.php">Trang chủ</a>
+                <a href="index.php?act=gioithieu">Giới thiệu</a>
+                <a href="index.php?act=muahang">Mua hàng</a>
+                <a href="index.php?act=giohang">Giỏ hàng</a>
+                <a href="index.php?act=taikhoan">Tài khoản</a>
+                <a href="index.php?act=lienhe">Liên hệ</a>
         </nav>
             <div class="search"><input type="text"><button><i class="fa-solid fa-magnifying-glass"></i></button> </div>           
         </header>

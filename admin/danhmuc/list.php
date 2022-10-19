@@ -7,9 +7,9 @@
         </tr>
     <?php foreach ($listdm as $dm) :  ?>
         <tr>
-            <td><?= $dm['id'] ?></td> 
+            <td><?= $dm['iddm'] ?></td> 
             <td><?= $dm['tendanhmuc']?></td>
-            <td><a onclick="return confirm('Bạn có chắc xóa không?');" href="index.php?act=deletedm&id=<?=$dm['id']?>">Xóa</a></td>
+            <td><a href="index.php?act=updatedm&id=<?=$dm['iddm']?>">Sửa</a><a onclick="return confirm('Bạn có chắc xóa không?');" href="index.php?act=deletedm&id=<?=$dm['iddm']?>">Xóa</a></td>
         </tr>
     <?php endforeach ?>
     </table>

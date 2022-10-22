@@ -7,7 +7,7 @@
             <th>Mật khẩu</th>
             <th>Ngày tạo</th>
             <th>Vai trò</th>
-            <th><a href="index.php?act=addtk">Thêm</a></th>
+            <th><a href="index.php?act=addtk"><button>Thêm người dùng</button></a></th>
         </tr>
     <?php foreach ($listtk as $tk) :  ?>
         <tr>
@@ -17,7 +17,7 @@
             <td><?= $tk['matkhau']?></td>
             <td><?= $tk['ngaytao']?></td>
             <td><?= $tk['vaitro']?></td>
-            <td><a href="index.php?act=updatetk&id=<?=$tk['id']?>">Sửa</a><a onclick="return confirm('Bạn có chắc xóa không?');" href="index.php?act=deletetk&id=<?=$tk['id']?>">Xóa</a></td>
+            <td><a href="index.php?act=updatetk&id=<?=$tk['id']?>"><button>Sửa</button></a><a onclick="return confirm('Bạn có chắc xóa không?');" href="index.php?act=deletetk&id=<?=$tk['id']?>"><button>Xóa</button></a></td>
         </tr>
     <?php endforeach ?>
     </table>

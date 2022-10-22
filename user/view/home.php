@@ -21,15 +21,14 @@
   <span class="dot"></span> 
 </div>
 <br>
-
-    <div class="sting">
-        <div class="content sdo">
-            <img src="" alt="">
-            <div class="word">
-                <h1>Sản phẩm bán chạy 1</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam deleniti, obcaecati, accusamus quae beatae quasi, exercitationem officiis dolorum reiciendis repellat libero ad? Saepe iure, reprehenderit voluptate rerum perferendis at aperiam nisi minus autem cumque minima deleniti!
-                </p>
-                <a href="Sanpham.php"><button>Mua ngay</button></a>
-            </div>
-        </div>
-    </div>
+<<?php foreach ($listsp as $sp) : ?>
+      <div class="hophome">
+      <div class="imghome"><img src="../img/<?= $sp['hinhanh']?>" alt=""></div>
+      <div class="wordhome">
+      <h2> <?= $sp['tensp']?></h2> <br> <br>
+      Giá: <?= $sp['gia']?> VNĐ <br> <br>
+      <h3> <?= $sp['mota']?></h3>
+      </div>
+        <button>Mua ngay</button>
+      </div>
+<?php endforeach ?>>

@@ -1,8 +1,14 @@
 <?php
+    session_start();
+    if(!isset($_SESSION['username'])){
+        header("location: index.php?act=dangnhap");
+    }
     require_once "../model/global.php";
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
     include "../model/taikhoan.php";
+    include "../model/thongke.php";
+    include "../model/binhluan.php";
     include "view/header.php";
     if(isset($_GET['act'])){
         $act=$_GET['act'];
@@ -97,12 +103,12 @@
                 include "sanpham/list.php";
                 break;
             case 'addtk':
-                if(isset($_POST['btn_tdm'])){
+                if(isset($_POST['btn_ttk'])){
                     $tentk=$_POST['tentk'];
                     $email=$_POST['email'];
                     $matkhau=$_POST['matkhau'];
                     $vaitro=$_POST['vaitro'];
-                    insert_danhmuc($tendm);
+                    insert_taikhoan($tentk,$email,$matkhau,$vaitro);
                     $thongbao="Thêm thành công"; 
                 }   
                 include "taikhoan/add.php";
@@ -111,10 +117,33 @@
                 $listtk=loadalltaikhoan();
                 include "taikhoan/list.php";
                 break;
+            case 'deletetk':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id=$_GET['id'];
+                delete_taikhoan($id);
+                }
+                $listtk=loadalltaikhoan();
+                include "taikhoan/list.php";
+                break;
+            case 'updatetk':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id=$_GET['id'];
+                $tk=update_taikhoan($id);
+                }
+                include "taikhoan/update.php";
+                break;
+            case 'updatedtk':
+                if(isset($_POST['btn_stk'])){
+                        updated_taikhoan();
+                }
+                $listtk=loadalltaikhoan();
+                include "taikhoan/list.php";
+                break;
             case 'listbl':
                 include "binhluan/list.php";
                 break;
             case 'looktke':
+                $thongkesp=thongkesp();
                 include "thongke/thongke.php";
                 break;
             default:

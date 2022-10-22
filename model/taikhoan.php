@@ -19,8 +19,16 @@
     }
     function updated_taikhoan(){
         $tentk=$_POST['tentk'];
+        $email=$_POST['email'];
+        $matkhau=$_POST['matkhau'];
+        $vaitro=$_POST['vaitro'];
         $id=$_POST['id'];
-        $sql="UPDATE taikhoan SET tennd = '$tentk' WHERE id =".$id;
+        $sql="UPDATE taikhoan SET tennd='$tentk',email='$email',matkhau='$matkhau',vaitro='$vaitro' WHERE id =".$id;
         pdo_execute($sql);
+    }
+    function timtaikhoan($username){
+        $sql = "SELECT * FROM taikhoan WHERE tennd='$username'";
+        $tk=pdo_query_one($sql);
+        return $tk;
     }
 ?>

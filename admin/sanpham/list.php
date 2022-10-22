@@ -7,7 +7,7 @@
             <th>Hình ảnh</th>
             <th>Mô tả</th>
             <th>Loại</th>
-            <th><a href="index.php?act=addsp">Thêm</a></th>
+            <th><a href="index.php?act=addsp"><button>Thêm sản phẩm</button></a></th>
         </tr>
     <?php foreach ($listsp as $sp) :  ?>
         <tr>
@@ -17,7 +17,7 @@
             <td><img src="../img/<?= $sp['hinhanh']?>" width="50px" alt=""></td>
             <td><?= $sp['mota']?></td>
             <td><?=$sp['tendanhmuc']?></td>
-            <td><a href="index.php?act=updatesp&id=<?=$sp['idsp']?>">Sửa</a><a onclick="return confirm('Bạn có chắc xóa không?');" href="index.php?act=deletesp&id=<?=$sp['idsp']?>">Xóa</a></td>
+            <td><a href="index.php?act=updatesp&id=<?=$sp['idsp']?>"><button>Sửa</button></a><a onclick="return confirm('Bạn có chắc xóa không?');" href="index.php?act=deletesp&id=<?=$sp['idsp']?>"><button>Xóa</button></a></td>
         </tr>
     <?php endforeach ?>
     </table>

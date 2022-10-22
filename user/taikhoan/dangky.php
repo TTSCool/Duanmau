@@ -37,6 +37,7 @@
     }
     }
 ?>
+    <h1 class="tenh1">Đăng ký tài khoản</h1>
     <form action="Dangky.php" method="POST">
         <label for="">Tên tài khoản: <br> <input type="text" name="username"></label>
         <br>

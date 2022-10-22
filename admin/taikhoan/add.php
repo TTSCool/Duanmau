@@ -14,7 +14,7 @@
     </select>
     </label>
     <br>
-    <button type="submit" name="btn_ttk">Thêm người dùng</button>
+    <button type="submit" name="btn_ttk">Thêm Tài khoản</button>
     <button type="button"><a href="index.php?act=listtk" style="text-decoration:none; color:black">Danh sách người dùng</a></button>
     <br>
     <?php

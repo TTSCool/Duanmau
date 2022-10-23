@@ -141,8 +141,39 @@
                 break;
             case 'listbl':
                 $listsp=loadallsp();
-                include "binhluan/list.php";
-                break;
+            if(isset($_POST['btn_tim'])){
+                $idloai=$_POST['chonloaisp'];
+                $tensp=$_POST['tensp'];
+                if($tensp==""){
+                if($idloai==""){
+                    $listsp=loadallsp();
+                }else{
+                    $listsp=loadtimsp($idloai);
+                }}else{
+                    if($idloai==""){
+                        $listsp=loadtimallsp($tensp);
+                    }else{
+                        $listsp=loadtimsptheoten($idloai,$tensp);
+                    }
+                }
+            }
+            $listdm=loadalldm();
+            include "binhluan/list.php";
+        break;
+        case 'sanphamct':
+            if(isset($_GET['idsp'])&&($_GET['idsp']>0)){
+                $id=$_GET['idsp'];
+                $_SESSION['idsp']=$_GET['idsp'];
+                $sp=update_sanpham($id);
+            }
+            if(isset($_POST['btn_bl'])){
+                $noidung=$_POST['noidung'];
+                $idngd=$_SESSION['id'];
+                $idsp=$_SESSION['idsp'];
+                binh_luan_insert($noidung, $idngd, $idsp);
+            }
+            include "binhluan/sanphamct.php";
+            break;
             case 'looktke':
                 $thongkesp=thongkesp();
                 include "thongke/thongke.php";
@@ -150,6 +181,7 @@
             default:
                 include "view/home.php";
                 break;
+            
         }
     }else{include "view/home.php";}
     

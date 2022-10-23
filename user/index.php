@@ -37,7 +37,6 @@
             }
             $listdm=loadalldm();
             include "muahang/sanpham.php";
-            
         break;
         case 'muasp':
             if(!isset($_SESSION['username'])){
@@ -109,6 +108,7 @@
             if(!isset($_SESSION['username'])){
             header("location: index.php?act=dangnhap");
         }
+            
             $ghinfo=giohang_taikhoan($id);
             $ghinfoct=ctgh_giohang($ghinfo['idgh']);
             include "giohang/giohang.php";
@@ -165,6 +165,9 @@
                     $tentk=$username;
                     $matkhau=$password;
                     insert_taikhoan($tentk,$email,$matkhau,2);
+                    $tk=timtaikhoan($tentk);
+                    $id=$tk['id'];
+                    addidgh($id);
                     echo "<script>
                     alert('Đăng ký thành công, hãy sang trang đăng nhập để đang nhập');
                 </script>";

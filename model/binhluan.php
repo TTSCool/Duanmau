@@ -16,8 +16,8 @@ function binh_luan_delete($idbl){
 //     return pdo_query($sql);
 // }
 //sp
-function binhluan_theo_sp($idsp,$idngd){
-    $sql = "SELECT bl.noidung, tk.tennd FROM binhluan bl INNER JOIN taikhoan tk ON bl.idngd = tk.id WHERE bl.idsp='$idsp' AND tk.id=".$idngd;
+function binhluan_theo_sp($idsp){
+    $sql = "SELECT bl.noidung, tk.tennd FROM binhluan bl INNER JOIN taikhoan tk ON bl.idngd = tk.id WHERE bl.idsp='$idsp' ORDER BY bl.ngaybl ";
     return pdo_query($sql);
 }
 //user

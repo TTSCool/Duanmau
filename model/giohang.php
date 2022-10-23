@@ -23,4 +23,8 @@
             $sql="INSERT INTO giohang (idngd, tinhtrang) VALUES ('$id','0')";
             pdo_execute($sql); 
     }
+    function addidgh($id){
+        $sql="INSERT INTO giohang(idngd, tinhtrang) VALUES ('$id','0')";
+        pdo_execute($sql);
+    }
 ?>

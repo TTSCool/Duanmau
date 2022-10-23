@@ -120,7 +120,61 @@
             thanhtoan($idgh,$id);
             header("Location: index.php?act=giohang");
         break;
-    }   
+        case 'dangky':
+            if (isset($_POST['btn_dangky'])){
+                $username = $_POST['username'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $repassword = $_POST['repassword'];
+                $check = true;
+                
+                if($username == ""){
+                    $username_err = "Bạn chưa nhập tên tài khoản";
+                    $check = false;
+                }else{
+                    $tk=loadalltaikhoan();
+                    foreach ($tk as $tk){
+                        if ($username==$tk['tennd']){
+                            $username_err = "Tên tài khoản đã được đăng ký";
+                            $check = false;
+                    }
+                }
+                }
+                if($email == ""){
+                    $email_err = "Bạn chưa nhập email";
+                    $check = false;
+                }else{
+                    $tk=loadalltaikhoan();
+                    foreach ($tk as $tk){
+                    if($email==$tk['email']){
+                        $email_err = "Email đã được đăng ký";
+                        $check = false;
+                }}}
+                if($password == ""){
+                    $password_err = "Bạn chưa nhập mật khẩu";
+                    $result = false;
+                }else if($password < 8 ){
+                    $password_err = "Bạn cần nhập đủ hoặc hơn 8 ký tự cho mật khẩu";
+                    $result = false;
+                }
+                if($password != $repassword){
+                    $repassword_err = "Mật khẩu nhập lại chưa chính xác";
+                    $result = false;
+                }
+                if($check == true){
+                    $tentk=$username;
+                    $matkhau=$password;
+                    insert_taikhoan($tentk,$email,$matkhau,2);
+                    echo "<script>
+                    alert('Đăng ký thành công, hãy sang trang đăng nhập để đang nhập');
+                </script>";
+                }
+            }else{
+                $check_err = "Đăng ký thất bại";
+            }
+            include "taikhoan/dangky.php";
+        break;  
+    }
     }else{
         $listsp=loadallsp2();
         include "view/home.php";

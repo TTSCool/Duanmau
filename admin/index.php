@@ -140,6 +140,7 @@
                 include "taikhoan/list.php";
                 break;
             case 'listbl':
+                $listsp=loadallsp();
                 include "binhluan/list.php";
                 break;
             case 'looktke':

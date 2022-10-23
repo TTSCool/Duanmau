@@ -11,10 +11,10 @@ function binh_luan_delete($idbl){
     $sql = "DELETE FROM binhluan WHERE idbl =".$idbl;
     pdo_execute($sql);
 }
-function binh_luan_select_all(){
-    $sql = "SELECT * FROM binhluan ORDER BY date_comment DESC";
-    return pdo_query($sql);
-}
+// function loadallbinhluan(){
+//     $sql = "SELECT sp.ten FROM binhluan bl INNER JOIN sanpham sp ON bl.idsp = sp.idsp ORDER BY bl.ngaybl DESC GROUP BY sp.tensp";
+//     return pdo_query($sql);
+// }
 //sp
 function binhluan_theo_sp($idsp,$idngd){
     $sql = "SELECT bl.noidung, tk.tennd FROM binhluan bl INNER JOIN taikhoan tk ON bl.idngd = tk.id WHERE bl.idsp='$idsp' AND tk.id=".$idngd;

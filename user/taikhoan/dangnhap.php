@@ -13,5 +13,5 @@
         <button type="submit" name="btn_dangnhap">Đăng nhập</button>
         <br>
         <br>
-        Chưa có tài khoản? <button><a href="Dangky.php" style="text-decoration:none; color:black">Đăng Ký</a></button>
+        Chưa có tài khoản? <button><a href="index.php?act=dangky" style="text-decoration:none; color:black">Đăng Ký</a></button>
     </form>

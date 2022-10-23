@@ -19,7 +19,7 @@
                 <div class="img"><img src="../img/<?= $sp['hinhanh']?>" alt=""></div>
                 <div class="word">
                 <?= $sp['tensp']?> <br>
-                <?= $sp['gia']?> <br>
+                <?= $sp['gia']?> VNĐ<br>
                 <input type="hidden" name="idsp" value="">
                 <button type="submit" name="btn_ctsp">Xem chi tiết</button>
                 </div>
